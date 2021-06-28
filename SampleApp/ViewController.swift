@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let app = App()
         app.featureOne()
+        app.featureTwo()
     }
 
 
