@@ -13,7 +13,23 @@
 		425400652689B14900147FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425400632689B14900147FC7 /* Main.storyboard */; };
 		425400672689B14A00147FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425400662689B14A00147FC7 /* Assets.xcassets */; };
 		4254006A2689B14A00147FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425400682689B14A00147FC7 /* LaunchScreen.storyboard */; };
+		425400892689B65600147FC7 /* SampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425400872689B65000147FC7 /* SampleSDK.framework */; };
+		4254008A2689B65600147FC7 /* SampleSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 425400872689B65000147FC7 /* SampleSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		425400852689B49C00147FC7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4254008A2689B65600147FC7 /* SampleSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4254005A2689B14900147FC7 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		425400662689B14A00147FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425400692689B14A00147FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4254006B2689B14A00147FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425400872689B65000147FC7 /* SampleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SampleSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425400892689B65600147FC7 /* SampleSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +74,7 @@
 		4254005C2689B14900147FC7 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				425400862689B65000147FC7 /* Frameworks */,
 				4254005D2689B14900147FC7 /* AppDelegate.swift */,
 				4254005F2689B14900147FC7 /* SceneDelegate.swift */,
 				425400612689B14900147FC7 /* ViewController.swift */,
@@ -65,6 +84,14 @@
 				4254006B2689B14A00147FC7 /* Info.plist */,
 			);
 			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		425400862689B65000147FC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				425400872689B65000147FC7 /* SampleSDK.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +104,7 @@
 				425400562689B14900147FC7 /* Sources */,
 				425400572689B14900147FC7 /* Frameworks */,
 				425400582689B14900147FC7 /* Resources */,
+				425400852689B49C00147FC7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,6 +315,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/SampleApp/Frameworks",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +338,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/SampleApp/Frameworks",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
