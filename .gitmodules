@@ -1,0 +1,3 @@
+[submodule "SampleSDK"]
+	path = SampleSDK
+	url = https://github.com/satyadevchauhan/SampleSDK.git
